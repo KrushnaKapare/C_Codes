@@ -14,5 +14,19 @@ int main(void)
             printf("%d",*cptr>>pos&1);
     }
     printf("\n");
+    
+    double num2=12.5;    
+    char *cptr2;
+    int pos2;
+    cptr2 = (char *)&num2;
+    for(cptr2 = cptr2+7 ; cptr2>=(char*)&num2; cptr2--)
+    {  
+        for(pos2=7; pos2>=0; pos2--)
+            printf("%d",*cptr2>>pos2&1);
+    }
+    printf("\n");
+    
     return 0;
+
+
 }
